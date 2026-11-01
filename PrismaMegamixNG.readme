@@ -1,0 +1,115 @@
+Short:        PrismaNG: Prisma Megamix card software
+Uploader:     marcus.gerards@googlemail.com (Marcus Gerards)
+Author:       Christian Euler, Marcus Gerards
+Type:         driver/audio
+Version:      3.2
+Architecture: m68k-amigaos >= 3.0
+Distribution: NoCD
+Requires:     A Prisma Megamix card (Zorro II or clockport), AmigaOS 3.x.
+              PrismaControl needs ReAction (OS 3.5+, its menus OS 3.2),
+              PrismaRec OS 3.2.
+              Song titles in PrismaPlay: util/libs/id3tag_lib (68020+).
+Kurz:         PrismaNG: Software fuer Prisma Megamix
+
+PrismaNG 3.2  --  26.10.2026
+
+
+WHAT IT IS
+
+The software for the Prisma Megamix, the Zorro II and clockport sound card
+built around VLSI Solution's VS1063a. The chip decodes MP3, Ogg Vorbis, AAC
+and FLAC by itself and records MP3, Ogg Vorbis and FLAC, so the Amiga only
+moves the data -- music on a 68000, with the CPU to spare.
+
+
+WHAT IS IN IT
+
+  * prisma.library: how every program reaches the card
+  * mhiprisma.library: the MHI driver, for AmigaAMP and other MHI players
+  * prisma.audio: the AHI driver, ten modes, four of them full duplex
+  * PrismaControl: the mixer, a commodity -- volume, balance, a 5-band EQ
+    or bass and treble, the input monitor and level meters, one hotkey
+    away (control lalt p); English and German, with a manual in each
+  * PrismaPlay: the Shell player, with playlists, ARexx, internet radio
+    and recording
+  * PrismaRec: the recorder, a cassette deck -- REC, PLAY, PAUSE, the
+    tape counter, the reels -- that records what the card hears into
+    MP3, Ogg Vorbis, FLAC or WAV and plays the takes back; Deck '84 drawn
+    on any screen and two decks of pictures (six more in the package
+    PrismaRecSkins, mus/edit), an ARexx port with macros that record what
+    EaglePlayer or HippoPlayer plays, a take a module; English and German
+    with a manual in each
+  * PrismaModes: plays a quiet tone in each AHI mode, ticks those your
+    Amiga manages and puts the ones you confirm into AHI's list
+  * PrismaEncode and prismadsp.library: a sound file -- WAV, AIFF, FLAC,
+    MP3, Ogg Vorbis, AAC, WMA and more -- into MP3, Ogg Vorbis or a WAV
+    format, encoded by the card's chip (a WAV faster than real time even
+    on a 68000; the compressed ones decoded by the chip too); with a
+    manual
+  * Normalise: a recording's loudest peak to a level (16-bit PCM WAV)
+  * SplitTracks: a recorded record side cut into its tracks at the breaks,
+    not fooled by crackle or rumble (16-bit PCM WAV)
+  * SetPrisma, PrismaDiag, PrismaState, MHIState, PrismaBench, AHIBench,
+    AddPrismaModes and PrismaRecTest: Shell tools
+  * VLSI Solution's VS1063a patch package 2.6, which the driver loads into
+    the chip: fixes, and the FLAC encoder
+
+
+INSTALLATION
+
+Double-click Install. The programs go into a drawer called Prisma, wherever
+you choose (SYS:Tools by default); S:User-Startup gets "Assign Prisma:" and
+"Path Prisma: ADD", so every Shell finds PrismaPlay by name. PrismaRec goes
+there too unless you choose another drawer for it, with its two decks of
+pictures if you want them. The libraries
+go to LIBS:, the drivers and the patch files to DEVS: -- the AHI driver
+only where AHI is installed -- and PrismaControl into SYS:WBStartup when the
+installer finds a card. With AHI, the installer then opens PrismaModes: a
+minute of measuring, and you choose the AHI modes to keep. Run it again
+from the Prisma drawer whenever the machine changes.
+
+
+THIRD-PARTY FILES
+
+vs1063a-patches.plg, vs1063a-encpatchesflac.plg and
+vs1063a-playpatchesspectrum.plg are Copyright VLSI Solution Oy, included
+unmodified as VLSI publishes them at
+https://www.vlsi.fi/en/support/software/vs10xxpatches.html -- as-is,
+without warranty, and not covered by this software's copyright. Their
+notice, VLSI-Patches.txt, is installed with the manuals, in the Prisma
+drawer's Help drawer.
+
+id3tag.library by David Mevius is not included:
+https://aminet.net/package/util/libs/id3tag_lib
+
+
+HISTORY
+
+3.2 - first release on Aminet:
+  - new prisma.library, MHI and AHI drivers
+  - recording: MP3, Ogg Vorbis, FLAC
+  - files encoded by the chip: prismadsp.library 1.2 and PrismaEncode
+    1.0, which reads WAV, AIFF, FLAC, MP3, Ogg Vorbis, AAC, WMA and more
+  - PrismaRec 1.0, the cassette-deck recorder, with Normalise 1.0 and
+    SplitTracks 1.0
+  - PrismaControl, the mixer commodity, in English and German
+  - an Installer script
+
+
+THANKS
+
+To David Steves, for testing on real hardware and for the detailed
+reports and recordings.
+
+To Martin "Mason" Merz, for the GlowIcons of PrismaControl, PrismaRec and
+the Prisma drawer.
+
+To Thomas Luebker, for AmiAgent, which let the software be tested on a
+real A4000T straight from the development machine.
+
+
+COPYRIGHT
+
+Copyright Christian Euler and Marcus Gerards. It may only be redistributed
+by its authors or by A-EON Technology Ltd. Provided as is, without any
+warranty; see the Copyright page of PrismaPlay.guide.

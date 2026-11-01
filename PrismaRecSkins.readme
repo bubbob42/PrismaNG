@@ -1,0 +1,99 @@
+Short:        Six more decks for PrismaRec
+Uploader:     marcus.gerards@googlemail.com (Marcus Gerards)
+Author:       Marcus Gerards
+Type:         mus/edit
+Version:      1.0
+Architecture: m68k-amigaos >= 3.2.0
+Distribution: NoCD
+Requires:     PrismaRec 1.0 or newer (in driver/audio/PrismaMegamixNG.lha,
+              PrismaNG 3.2 or newer); a screen of 64 colours or more
+Kurz:         Sechs weitere Decks fuer PrismaRec
+
+PrismaRecSkins 1.0  --  18.10.2026
+
+
+WHAT IT IS
+
+Six more decks for PrismaRec, the cassette-deck recorder for the Prisma
+Megamix sound card. A deck is a look for PrismaRec's window, painted
+rather than drawn: its face, its keys held down, the cassette's door shut
+and open. PrismaRec puts its own working parts on it -- the reels, the
+level meters, the tape counter, the lamps, the time and the take.
+
+PrismaRec draws Deck '84 and its System look itself, on any screen, and
+comes with two decks of pictures, 1985 Graphite and 1990 Titanium. This
+package has the others.
+
+
+WHAT IS IN IT
+
+Each deck is one drawer in Files/Skins; in quotes the name PrismaRec's
+settings list it by.
+
+  Skins/1975      "1975 Walnut": champagne aluminium in a walnut trim,
+                  cream piano keys, an amber display
+  Skins/Silver    "Silver": a brushed aluminium face with silver keys and
+                  a green display
+  Skins/Black80s  "Black '80s": black brushed metal with gold letters, the
+                  cassette behind a smoked door, three lamps, a tape
+                  counter of its own, a meter of two rows with a scale
+                  under each
+  Skins/Early80s  "Early '80s": champagne aluminium, the cassette behind a
+                  smoked door, three lamps, one wide panel for the time,
+                  the take and the tape counter
+  Skins/D90       "D-90": a silver deck of 1980 -- keys that tilt down when
+                  pressed, a tape counter of three wheels, two VU meters
+                  with moving needles, the input chosen by a plug in one of
+                  its two MIC jacks
+  Skins/A4000D    "A4000D": the deck in the front of an Amiga 4000 desktop
+                  -- an LED tape counter, the input on the key lock, the
+                  HDISK lamp lit while it records, the cassette on a tray
+                  that slides out of the drive bay
+
+Each drawer holds the deck's Skin.prefs, which places every part, its
+pictures (ILBM) and, in Soft, a second set drawn for half-high pixels.
+
+
+WHAT THEY NEED
+
+  * PrismaRec 1.0 or newer. It comes with PrismaNG, the Prisma Megamix
+    software (driver/audio/PrismaMegamixNG.lha), and in a package of its
+    own.
+  * A screen of 64 colours or more: AGA, or a graphics card. On a screen
+    with fewer PrismaRec shows Deck '84 instead.
+  * On PAL or NTSC hires, whose pixels are half as high as they are wide,
+    PrismaRec uses the deck's second set (Soft) by itself.
+  * The words on the decks are printed in helvetica, and Black '80s' in
+    times as well: fonts every Workbench has in FONTS:.
+  * About 650 KB of disk space a deck, 3.9 MB for all six. Setting a deck
+    up takes some seconds on a slower machine; a small window shows how
+    far it has come.
+
+
+INSTALLATION
+
+Double-click Install. It looks for PrismaRec where its Installers put it
+-- the Prisma drawer (the PrismaNG Installer), SYS:Tools/PrismaRec
+(PrismaRec's own package) -- and copies the decks into the drawer Skins
+beside PrismaRec, making Skins if there is none.
+
+  * Novice: all six decks, into the PrismaRec it found. Without one it
+    stops and says so.
+  * Intermediate and Expert: it asks for PrismaRec's drawer (offering the
+    one it found) and which decks you want.
+
+By hand: copy the deck drawers you want from Files/Skins into the drawer
+Skins beside PrismaRec -- one drawer a deck, as many as you like.
+
+PrismaRec looks into Skins when it starts: quit a PrismaRec that runs and
+start it again. Then choose the deck in Settings > Display (Einstellungen
+> Aussehen in German), or start PrismaRec with SKIN= and the deck's
+drawer, such as SKIN=D90. A deck that cannot be used is left out of the
+list; chosen by name, PrismaRec says why.
+
+To remove a deck, delete its drawer from Skins.
+
+
+HISTORY
+
+1.0 - first release
